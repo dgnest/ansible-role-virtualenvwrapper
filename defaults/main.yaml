@@ -18,3 +18,6 @@ virtualenvwrapper_dependencies:
 virtualenvwrapper_pip_dependencies:
   - name: "virtualenvwrapper"
     version: "4.7.1"
+
+# virtualenvwrapper_postactivate_dict:
+#   key: value
