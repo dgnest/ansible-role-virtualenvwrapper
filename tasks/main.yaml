@@ -12,10 +12,10 @@
 
 - include: pip.yaml
 
-- include: templates.yaml
+- include: validation.yaml
 
 - include: config.yaml
 
-- include: validation.yaml
-
 - include: setup.yaml
+
+- include: templates.yaml
