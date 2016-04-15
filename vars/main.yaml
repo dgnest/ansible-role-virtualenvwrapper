@@ -3,8 +3,9 @@
 # vars file for virtualenvwrapper
 
 _virtualenvwrapper_path: "{{ path_home_user }}/.virtualenvs"
-_virtualenvwrapper_file_activate: "{{ virtualenvwrapper_path }}/bin/activate"
-_virtualenvwrapper_file_postactivate: "{{ virtualenvwrapper_path }}/bin/postactivate"
+_virtualenvwrapper_env_path: "{{ _virtualenvwrapper_path }}/{{ virtualenvwrapper_name }}"
+_virtualenvwrapper_file_activate: "{{ _virtualenvwrapper_env_path }}/bin/activate"
+_virtualenvwrapper_file_postactivate: "{{ _virtualenvwrapper_env_path }}/bin/postactivate"
 _virtualenvwrapper_file_sh: "/usr/local/bin/virtualenvwrapper.sh"
 _virtualenvwrapper:
   script_templates:

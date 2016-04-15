@@ -3,7 +3,7 @@
 - name: Create work_home virtualenvwrapper
   sudo_user: "{{ user }}"
   shell: >
-    export WORKON_HOME={{ virtualenvwrapper_path }} &&
+    export WORKON_HOME={{ _virtualenvwrapper_path }} &&
     mkdir -p $WORKON_HOME
   args:
     chdir: "{{ path_home_user }}"
