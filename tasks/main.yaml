@@ -11,3 +11,5 @@
 - include: dependences.yaml
 
 - include: pip.yaml
+
+- include: templates.yaml
