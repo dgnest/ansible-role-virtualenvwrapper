@@ -1,0 +1,21 @@
+---
+
+- include: environment.yaml
+
+- include: host.yaml
+
+- include: apps.yml
+
+- include: files.yaml
+
+- include: dependences.yaml
+
+- include: pip.yaml
+
+- include: templates.yaml
+
+- include: config.yaml
+
+- include: validation.yaml
+
+- include: setup.yaml

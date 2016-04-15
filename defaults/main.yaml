@@ -1,0 +1,25 @@
+---
+# defaults file for virtualenvwrapper
+
+path_home_user: "/home/{{ user }}"
+
+virtualenvwrapper_name: "project"
+virtualenvwrapper_path: "{{ _virtualenvwrapper_path }}/{{ virtualenvwrapper_name }}"
+
+# Virtualenvwrapperwrapper_package_dependencies:
+  # - "wget"
+  # - "curl"
+
+virtualenvwrapper_dependencies:
+  - name: "python2.7-dev"
+    version: ""
+  - name: "python-dev"
+    version: ""
+  - name: "python-pip"
+
+virtualenvwrapper_pip_dependencies:
+  - name: "virtualenvwrapper"
+    version: "4.7.1"
+
+# virtualenvwrapper_postactivate_dict:
+#   key: value
