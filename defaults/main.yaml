@@ -1,6 +1,8 @@
 ---
 # defaults file for virtualenvwrapper
 
+path_home_user: "/home/{{ user }}"
+
 virtualenvwrapper_name: "project"
 virtualenvwrapper_path: "{{ _virtualenvwrapper_path }}/{{ virtualenvwrapper_name }}"
 

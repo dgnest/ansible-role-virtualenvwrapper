@@ -2,7 +2,7 @@
 
 # vars file for virtualenvwrapper
 
-_virtualenvwrapper_path: "/home/{{ user }}/.virtualenv"
+_virtualenvwrapper_path: "{{ path_home_user }}/.virtualenv"
 _virtualenvwrapper_file_activate: "{{ virtualenvwrapper_path }}/bin/activate"
 _virtualenvwrapper_file_postactivate: "{{ virtualenvwrapper_path }}/bin/postactivate"
 
