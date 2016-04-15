@@ -1,0 +1,7 @@
+#!/bin/bash
+
+{% if virtualenvwrapper_postactivate_dict %}
+{% for key,value in virtualenvwrapper_postactivate_dict.items() %}
+export {{key}}='{{value}}'
+{% endfor %}
+{% endif %}
