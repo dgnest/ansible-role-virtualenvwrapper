@@ -14,7 +14,7 @@
   sudo_user: "{{ user }}"
   raw: "echo '{{ item }}' >> {{ path_home_user }}/.bashrc"
   with_items:
-    - export WORKON_HOME={{ virtualenvwrapper_path }}
+    - export WORKON_HOME={{ _virtualenvwrapper_path }}
     - source {{ _virtualenvwrapper_file_sh }}
   when: virtualenvwrapper_exist.stat.isdir is defined
   when: mkvirtualenvwrapper_created|success

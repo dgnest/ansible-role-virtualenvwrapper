@@ -1,7 +1,7 @@
 ---
 - name: Check virtualenvwrapper created
   stat:
-    path: "{{ virtualenvwrapper_path }}"
+    path: "{{ _virtualenvwrapper_env_path }}"
   register: virtualenvwrapper_exist
   tags:
     - virtualenvwrapper

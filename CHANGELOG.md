@@ -4,6 +4,11 @@ This file uses change log convention from [Keep a CHANGELOG](http://keepachangel
 
 ## [Unreleased][unreleased]
 
+## [0.0.3] - 2016-04-15
+
+### Added:
+- fixed
+
 ## [0.0.2] - 2016-04-15
 
 ### Added:
@@ -14,7 +19,8 @@ This file uses change log convention from [Keep a CHANGELOG](http://keepachangel
 ### Added:
 - fixed
 
-[unreleased]: https://github.com/hadenlabs/ansible-role-virtualenvwrapper/compare/0.0.2...HEAD
+[unreleased]: https://github.com/hadenlabs/ansible-role-virtualenvwrapper/compare/0.0.3...HEAD
+[0.0.3]: https://github.com/hadenlabs/ansible-role-virtualenvwrapper/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/hadenlabs/ansible-role-virtualenvwrapper/compare/0.0.1...0.0.2
 [0.0.1]: https://github.com/hadenlabs/ansible-role-virtualenvwrapper/compare/0.0.0...0.0.1
 
