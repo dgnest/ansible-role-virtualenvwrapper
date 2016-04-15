@@ -1,0 +1,21 @@
+---
+
+- name: Create virtualenvwrapper
+  sudo_user: "{{ user }}"
+  raw: "source /usr/local/bin/virtualenvwrapper.sh && mkvirtualenv {{ virtualenvwrapper_name }}"
+  when: virtualenvwrapper_exist.stat.isdir is not defined
+  register: mkvirtualenvwrapper_created
+- debug: var=mkvirtualenvwrapper_created.stdout_lines
+  tags:
+    - virtualenvwrapper
+    - create
+
+- name: Copy virtualenvwraper to .bashrc
+  sudo_user: "{{ user }}"
+  raw: "echo '{{ item }}' >> {{ path_home_user }}/.bashrc"
+  with_items:
+    - export WORKON_HOME={{ virtualenvwrapper_path }}
+    - source {{ _virtualenvwrapper_file_sh }}
+  when: virtualenvwrapper_exist.stat.isdir is defined
+  when: mkvirtualenvwrapper_created|success
+  register: copy_virtualenvwraper_bash
