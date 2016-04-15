@@ -12,6 +12,6 @@ virtualenvwrapper_dependencies:
     version: ""
   - name: "python-pip"
 
-# virtualenvwrapper_pip_dependencies:
-  # - name: "None"
-    # version: "0.0.0"
+virtualenvwrapper_pip_dependencies:
+  - name: "virtualenvwrapper"
+    version: "4.7.1"
