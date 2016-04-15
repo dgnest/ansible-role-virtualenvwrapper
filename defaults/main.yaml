@@ -1,0 +1,17 @@
+---
+# defaults file for virtualenvwrapper
+
+# Virtualenvwrapper_package_dependencies:
+  # - "wget"
+  # - "curl"
+
+virtualenvwrapper_dependencies:
+  - name: "python2.7-dev"
+    version: ""
+  - name: "python-dev"
+    version: ""
+  - name: "python-pip"
+
+# virtualenvwrapper_pip_dependencies:
+  # - name: "None"
+    # version: "0.0.0"
