@@ -5,8 +5,8 @@ This file uses change log convention from [Keep a CHANGELOG](http://keepachangel
 ## [Unreleased][unreleased]
 
 
-[unreleased]: https://github.com/hadenlabs/ansible-role-virtualenwrapper/compare/0.0.1...HEAD
-[0.0.1]: https://github.com/hadenlabs/ansible-role-virtualenwrapper/compare/0.0.0...0.0.1
+[unreleased]: https://github.com/hadenlabs/ansible-role-virtualenvwrapper/compare/0.0.1...HEAD
+[0.0.1]: https://github.com/hadenlabs/ansible-role-virtualenvwrapper/compare/0.0.0...0.0.1
 
 [CHANGELOG.md]: CHANGELOG.md
 [CONTRIBUTING.md]: CONTRIBUTING.md
