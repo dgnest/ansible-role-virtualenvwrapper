@@ -2,9 +2,9 @@
 
 - include: environment.yaml
 
-- include: apps.yml
-
 - include: host.yaml
+
+- include: apps.yml
 
 - include: files.yaml
 
@@ -13,3 +13,9 @@
 - include: pip.yaml
 
 - include: templates.yaml
+
+- include: config.yaml
+
+- include: validation.yaml
+
+- include: setup.yaml
