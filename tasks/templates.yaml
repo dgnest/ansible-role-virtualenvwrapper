@@ -1,0 +1,9 @@
+---
+
+- name: Added script virtualenvwrapper
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items: _virtualenvwrapper.script_templates
+  when: _virtualenvwrapper.script_templates is defined

@@ -1,0 +1,38 @@
+---
+- name: Check virtualenvwrapper created
+  stat:
+    path: "{{ virtualenvwrapper_path }}"
+  register: virtualenvwrapper_exist
+  tags:
+    - virtualenvwrapper
+    - check
+
+- name: Create work_home virtualenv
+  sudo_user: "{{ user }}"
+  shell: >
+    export WORKON_HOME={{ virtualenvs_path }} &&
+    mkdir -p $WORKON_HOME
+  args:
+    chdir: "{{ app.dir.home }}"
+  when: virtualenvs_exist.stat.isdir is not defined
+  register: work_home_virtualenv
+
+- name: Create virtualenvs
+  sudo_user: "{{ user }}"
+  raw: "source /usr/local/bin/virtualenvwrapper.sh && mkvirtualenv {{ virtualenv }}"
+  when: virtualenvs_exist.stat.isdir is not defined
+  register: mkvirtualenv_created
+- debug: var=mkvirtualenv_created.stdout_lines
+  tags:
+    - virtualenvs
+    - create
+
+- name: Copy 'Added virtualenvwraper to .bashrc {{ virtualenv }}'
+  sudo_user: "{{ user }}"
+  raw: "echo '{{ item }}' >> {{ app_dir_home }}/.bashrc"
+  with_items:
+    - export WORKON_HOME={{ virtualenvs_path}}
+    - source /usr/local/bin/virtualenvwrapper.sh
+  when: virtualenvs_exist.stat.isdir is defined
+  when: mkvirtualenv_created|success
+  register: copy_virtualenvwraper_bash
